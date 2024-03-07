@@ -7,6 +7,7 @@
 
 
 from bank_account import *
+import emoji
 Dave = BankAccount(1000, "Dave")
 Sara = BankAccount(2000, "Sara")
 
@@ -15,4 +16,6 @@ Sara.getBalance()
 
 Dave.deposit(3000)
 Sara.deposit(5000)
-Dave.withdraw(300000)
+Dave.withdraw(100)
+
+Dave.transfer(1000, Sara)

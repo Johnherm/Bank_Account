@@ -1,3 +1,4 @@
+import emoji
 class BalanceException(Exception):
     pass
 
@@ -15,7 +16,7 @@ class BankAccount():
     def deposit(self, amount):
         self.balance = self.balance + amount
         print(f"\nAccount '{self.name}' balance = $'{self.balance:.2f}'")
-        print("Deposit complete")
+        print(emoji.emojize("Deposit complete :travel:"))
         #Checking left amount of balance to withdraw
     def viableTransaction(self, amount):
         if self.balance >= amount:
@@ -32,7 +33,7 @@ class BankAccount():
             print(f"\n Withdraw interrupted: {error}")
     def transfer(self, amount, account):
         try:
-            print("\n************\n\n Beginning Transfer.. ")
+            print(emoji.emojize("\n************\n\n Beginning Transfer.. :dollar: "))
             self.viableTransaction(amount)
             self.withdraw(amount)
             account.deposit(amount)
