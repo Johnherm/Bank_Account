@@ -14,7 +14,7 @@ class BankAccount():
         else:
             print(f"Sorry your balance is insufficient")
     def withdraw(self, withdraw):
-        self.leftBalance(amount)
+        self.leftBalance(withdraw)
         self.balance = self.balance - withdraw
         print(f"\n{self.name} is withdraw ${withdraw} and now it has ${self.balance} amount of balance")
 
